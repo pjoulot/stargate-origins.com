@@ -32,6 +32,10 @@ h1 {
   max-width: 100%;
 }
 
+.partenariat {
+  margin-top: 50px;
+}
+
 .copyright {
   font-size: 11px;
   position: absolute;
@@ -40,4 +44,13 @@ h1 {
   left: 0;
   margin: auto;
   padding-bottom: 15px;
+}
+
+a {
+  color: #EB8938;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
