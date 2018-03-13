@@ -1,56 +1,76 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../assets/fonts/OpenSans-Regular-webfont.eot') format('embedded-opentype'),
+         url('../assets/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   height: 100vh;
-  background-image: url("../assets/images/origins.png");
-  background-size: cover;
+  background-color: #151515;
   padding: 0;
   margin: 0;
+  font-family: open_sansregular;
+}
+
+.inner-content {
+  margin: auto;
+  max-width: 1000px;
 }
 
 h1 {
   text-transform: uppercase;
 }
 
-.content {
+.header {
+  background-image: url("../assets/images/banner.png");
+  background-position: center;
+  height: 142px;
+  width: 100%;
+}
+
+.home-block a {
+  width: 132px;
+  height: 63px;
+  display: block;
+  margin-right: 10px;
+}
+
+.menu-section-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  text-align: center;
-  color: #FFF;
-  padding: auto;
-  text-shadow: 2px 2px #10171F;
-  position: relative;
-  background: linear-gradient(50deg, rgba(11, 11, 21, 0.9), rgba(60, 54, 64, 0.9));
-  padding-bottom: 250px;
+  background-color: #FFF;
 }
 
-.content iframe {
-  max-width: 100%;
+.main-menu--links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 63px;
+  align-items: center;
 }
 
-.partenariat {
-  margin-top: 50px;
-}
-
-.copyright {
-  font-size: 11px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  padding-bottom: 15px;
-}
-
-a {
-  color: #EB8938;
+.main-menu--links a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.main-menu--links a, .main-menu--links a:hover, .main-menu--links a:visited {
+  color: #151515;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.main-menu--level-1 {
+  text-transform: uppercase;
+}
+
+.main-menu--level-2 {
+  height: 0;
+  overflow: hidden;
 }
