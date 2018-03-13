@@ -24,10 +24,19 @@ body {
   max-width: 1000px;
 }
 
+a, a:visited, a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 h1 {
   text-transform: uppercase;
   margin: 0;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 0 20px 0;
 }
 
 .header {
@@ -127,8 +136,64 @@ h1 {
 .main-content {
   width: 100%;
   max-width: 700px;
+  padding: 20px;
 }
 
 .right-column {
   width: 300px;
+}
+
+.news-list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.news-teaser {
+  width: 320px;
+  position: relative;
+}
+
+.news-teaser--content-text {
+  overflow: hidden;
+  width: 240px;
+  transition: height 0.5s ease;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 10px 10px 0 10px;
+}
+
+.news-teaser--content-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 17px;
+}
+
+.news-teaser--content-text .news-teaser--description {
+  font-size: 13px;
+  color: #7d7d7d;
+}
+
+.news-teaser--content-text a, .news-teaser--content-text a:hover, .news-teaser--content-text a:visited {
+  color: #151515;
+  text-decoration: none;
+}
+
+.news-teaser--content-text:hover {
+  height: 180px;
+}
+
+.news-teaser--date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  padding: 5px;
+  font-size: 14px;
 }
