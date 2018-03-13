@@ -26,6 +26,8 @@ body {
 
 h1 {
   text-transform: uppercase;
+  margin: 0;
+  padding: 20px 20px 20px 20px;
 }
 
 .header {
@@ -34,6 +36,8 @@ h1 {
   height: 142px;
   width: 100%;
 }
+
+/** Menu **/
 
 .home-block a {
   width: 132px;
@@ -46,6 +50,8 @@ h1 {
   display: flex;
   background-color: #FFF;
   position: relative;
+  border-bottom: solid 1px #d9d9d9;
+  box-shadow: 0 4px 2px -2px #d9d9d9;
 }
 
 .main-menu--links {
@@ -109,4 +115,20 @@ h1 {
 
 .main-menu--links.main-menu--level-2 a, .main-menu--links.main-menu--level-2 a:hover, .main-menu--links.main-menu--level-2 a:visited {
   color: #FFF;
+}
+
+/** Content **/
+.main-container {
+  background-color: #FFF;
+  padding-top: 10px;
+  display: flex;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 700px;
+}
+
+.right-column {
+  width: 300px;
 }
