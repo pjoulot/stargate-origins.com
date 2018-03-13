@@ -45,6 +45,7 @@ h1 {
 .menu-section-container {
   display: flex;
   background-color: #FFF;
+  position: relative;
 }
 
 .main-menu--links {
@@ -58,12 +59,31 @@ h1 {
 
 .main-menu--links a {
   text-decoration: none;
+  padding: 0 15px 0 15px;
+  height: 63px;
+  display: block;
+  line-height: 63px;
+  position: relative;
 }
 
 .main-menu--links a, .main-menu--links a:hover, .main-menu--links a:visited {
   color: #151515;
   font-size: 15px;
   font-weight: bold;
+}
+
+.main-menu--level-1.main-menu--links .multiple-links:hover a:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    content:"";
+    display:block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+    left: 50%;
+    margin-left: -8px;
 }
 
 .main-menu--level-1 {
@@ -73,4 +93,20 @@ h1 {
 .main-menu--level-2 {
   height: 0;
   overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  transition: height 0.5s ease;
+  width: 100%;
+  left: 0;
+  background-color: #232B2B;
+  text-transform: initial;
+}
+
+.main-menu--links.main-menu--level-1 a:hover + .main-menu--level-2, .main-menu--level-2:hover {
+  height: 63px;
+  width: 100%;
+}
+
+.main-menu--links.main-menu--level-2 a, .main-menu--links.main-menu--level-2 a:hover, .main-menu--links.main-menu--level-2 a:visited {
+  color: #FFF;
 }
