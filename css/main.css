@@ -13,7 +13,7 @@
 
 body {
   height: 100vh;
-  background-color: #151515;
+  background-color: #dee5ed;
   padding: 0;
   margin: 0;
   font-family: open_sansregular;
@@ -57,7 +57,6 @@ h1 {
 
 .menu-section-container {
   display: flex;
-  background-color: #FFF;
   position: relative;
   border-bottom: solid 1px #d9d9d9;
   box-shadow: 0 4px 2px -2px #d9d9d9;
@@ -196,4 +195,26 @@ h1 {
   color: #FFF;
   padding: 5px;
   font-size: 14px;
+}
+
+/** Footer **/
+
+.footer {
+  background-color: #eef2f6;
+  padding: 20px 40px 20px 40px;
+  box-shadow: 0 -4px 2px -2px #d9d9d9;
+  border-top: solid 1px #d9d9d9;
+}
+
+.footer--menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer--menu {
+  padding: 0 20px 0 20px;
+}
+
+.footer--copyright {
+  padding: 10px 20px 0 20px;
 }
