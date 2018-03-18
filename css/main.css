@@ -147,7 +147,7 @@ h1 {
     margin-left: -8px;
 }
 
-.main-menu--level-1.main-menu--links .multiple-links>a:before {
+.has-touch .main-menu--level-1.main-menu--links .multiple-links>a:before {
   content: "⌄";
   display: inline-block;
   position: absolute;
@@ -161,7 +161,7 @@ h1 {
   transition: 0.5s;
 }
 
-.main-menu--level-1.main-menu--links .multiple-links.open>a:before {
+.has-touch .main-menu--level-1.main-menu--links .multiple-links.open>a:before {
   transform: rotate(180deg);
 }
 

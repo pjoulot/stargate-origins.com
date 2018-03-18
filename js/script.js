@@ -9,6 +9,9 @@
   if (!hasTouch) {
     document.body.className += ' no-touch';
   }
+  else {
+	  document.body.className += ' has-touch';
+  }
 
   document.querySelector('.mobile-menu-button').addEventListener("click", function(){
     this.classList.toggle("open");
@@ -16,7 +19,7 @@
     document.querySelector('.main-menu').classList.toggle("open");
   }, false);
   
-  var linksLevel1 = document.querySelectorAll('.main-menu--level-1.main-menu--links .multiple-links>a');
+  var linksLevel1 = document.querySelectorAll('.has-touch .main-menu--level-1.main-menu--links .multiple-links>a');
   
   for (var i=0; i< linksLevel1.length; i++) {
     linksLevel1[i].addEventListener("click", function(event){
