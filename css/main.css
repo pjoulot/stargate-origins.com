@@ -29,12 +29,12 @@ p {
   max-width: 1000px;
 }
 
-a, a:visited, a:hover {
+a, a:visited, .no-touch a:hover {
   color: #3C3C3C;
   text-decoration: none;
 }
 
-a:hover {
+.no-touch a:hover {
   text-decoration: underline;
 }
 
@@ -127,13 +127,13 @@ h1 {
   position: relative;
 }
 
-.main-menu--links a, .main-menu--links a:hover, .main-menu--links a:visited {
+.main-menu--links a, .no-touch .main-menu--links a:hover, .main-menu--links a:visited {
   color: #151515;
   font-size: 15px;
   font-weight: bold;
 }
 
-.main-menu--level-1.main-menu--links .multiple-links:hover a:after {
+.no-touch .main-menu--level-1.main-menu--links .multiple-links:hover>a:after, .main-menu--level-1.main-menu--links .multiple-links.open>a:after {
     width: 0;
     height: 0;
     position: absolute;
@@ -145,6 +145,24 @@ h1 {
     border-top: 8px solid #fff;
     left: 50%;
     margin-left: -8px;
+}
+
+.main-menu--level-1.main-menu--links .multiple-links>a:before {
+  content: "⌄";
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  font-size: 40px;
+  width: 30px;
+  text-align: center;
+  z-index: 20;
+  line-height: 32px;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.main-menu--level-1.main-menu--links .multiple-links.open>a:before {
+  transform: rotate(180deg);
 }
 
 .main-menu--level-1 {
@@ -163,12 +181,12 @@ h1 {
   text-transform: initial;
 }
 
-.main-menu--links.main-menu--level-1 a:hover + .main-menu--level-2, .main-menu--level-2:hover {
+.no-touch .main-menu--links.main-menu--level-1 a:hover + .main-menu--level-2, .main-menu--links.main-menu--level-1 .multiple-links.open a + .main-menu--level-2, .no-touch .main-menu--level-2:hover {
   height: 63px;
   width: 100%;
 }
 
-.main-menu--links.main-menu--level-2 a, .main-menu--links.main-menu--level-2 a:hover, .main-menu--links.main-menu--level-2 a:visited {
+.main-menu--links.main-menu--level-2 a, .no-touch .main-menu--links.main-menu--level-2 a:hover, .main-menu--links.main-menu--level-2 a:visited {
   color: #FFF;
 }
 
@@ -229,12 +247,12 @@ h1 {
   color: #7d7d7d;
 }
 
-.news-teaser--content-text a, .news-teaser--content-text a:hover, .news-teaser--content-text a:visited {
+.news-teaser--content-text a, .no-touch .news-teaser--content-text a:hover, .news-teaser--content-text a:visited {
   color: #151515;
   text-decoration: none;
 }
 
-.news-teaser--content-text:hover {
+.no-touch .news-teaser--content-text:hover {
   height: 180px;
 }
 
@@ -464,6 +482,19 @@ h1 {
     z-index: 15;
     width: 100%;
     height: 64px;
+  }
+  
+  .main-menu--links {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .main-menu--links li {
+    width: 100%;
+  }
+
+  .main-menu--level-2 {
+    position: relative;
   }
 
   .main-content-zone {
